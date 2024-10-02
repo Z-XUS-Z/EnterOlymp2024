@@ -24,3 +24,5 @@ def test_chess_move_not_allowed():
     assert 'move not allowed' == ches(1, 8, 1)
     assert 'move not allowed' == ches(10, 62, 1)
     assert 'move not allowed' == ches(0, 55, 56)
+    
+#python -m pytest
