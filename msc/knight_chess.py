@@ -38,12 +38,12 @@ def dvij_konya_beta(gor,vert,doska):
 
 def greedy_sort(m):
     a=0
-    for i in range(1,len(m)):
+    for i in range(len(m)):
         for i in range(1,len(m)):
             if dvij_konya_beta(m[i][0],m[i][1],doska)>dvij_konya_beta(m[i-1][0],m[i-1][1],doska):
                 a=m[i-1]
-                m[i-1]=m[i].append(dvij_konya_beta(m[i][0],m[i][1],doska))
-                m[i]=a.append(dvij_konya_beta(m[i-1][0],m[i-1][1],doska))
+                m[i-1]=m[i]
+                m[i]=a
             
 
 def dvij_konya(gor,vert,doska):
@@ -101,5 +101,5 @@ def donkihot(gor,vert,doska,count):
     return False
 
 doska=[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]
-#donkihot(3,3,doska,1)
-print(dvij_konya(3,3,doska))
+donkihot(3,3,doska,1)
+print(doska)
